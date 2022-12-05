@@ -1,0 +1,102 @@
+:root {
+  --azulescurosombra: #0f1318;
+  --vermelha: #e93d50;
+  --azulclaro: #1b2c3d;
+  --vermelha-escura: #af303f;
+  --azulmedio: #242b40ff;
+  --luz: rgb(80 199 218);
+  --branca:#ffff;
+  --escuro:#00060d;
+  
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(301deg, #051937, #1e1e2f, #0b1f3c, #010c1c, #262532);
+  background-size: 400% 400%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  -webkit-animation: AnimationName 32s ease infinite;
+  -moz-animation: AnimationName 32s ease infinite;
+  -o-animation: AnimationName 32s ease infinite;
+  animation: AnimationName 32s ease infinite;
+}
+
+h1 {
+  color: var(--branca);
+  margin-bottom: 20px;
+  font-size: 4.5rem;
+  font-family: 'Staatliches', cursive;
+  text-shadow: 0 0 0.2em rgb(80 199 218), 0 0 0.1em #87f, 0 0 0.1em #87f;
+  
+}
+
+.teclado {
+  background: linear-gradient(to bottom, #1a2230 0%,#111c21 100%);
+  box-shadow: 6px 8px 0 6px #00060d, 10px 10px 10px #000;
+  border-radius: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.tecla {
+  background-color: var(--azulmedio);
+  border-radius: 30px;
+  box-shadow: 3px 3px 0 var(--azulescurosombra);
+  color: var(--branca);
+  cursor: pointer;
+  height: 120px;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 120px;
+  text-shadow: 0 0 0.2em rgb(80 199 218), 0 0 0.01em #87f, 0 0 0.01em #87f;
+}
+
+.tecla.ativa,
+.tecla:active {
+  background-color: var(--azulclaro);
+  border: 4px solid  var(--azulclaro);
+  box-shadow: 3px 3px 4px var(--escuro) inset;
+  color: var(--branca);
+  outline: none;
+}
+
+.tecla.focus,
+.tecla:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px var(--luz);
+}
+
+.tecla.active:focus,
+.tecla:active:focus {
+  box-shadow: 3px 3px 4px #000 inset, 1px 1px 10px rgb(80 199 218);
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+
